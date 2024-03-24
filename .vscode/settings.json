@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "bootstrap.skel.h": "c",
+        "hello.skel.h": "c"
+    }
+}

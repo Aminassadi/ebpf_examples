@@ -41,7 +41,7 @@ sudo src/.bin/bootstrap
 
 ## **Contributing**
 
-We welcome contributions to improve this template! If you have any ideas or suggestions,
+We welcome contributions to improve or expand these examples! If you have any ideas or suggestions,
 feel free to create an issue or submit a pull request.
 
 ## **License**

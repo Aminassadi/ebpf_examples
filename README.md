@@ -2,7 +2,6 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 [![Build and publish](https://github.com/eunomia-bpf/libbpf-starter-template/actions/workflows/publish.yml/badge.svg)](https://github.com/eunomia-bpf/libbpf-starter-template/actions/workflows/publish.yml)
-![GitHub stars](https://img.shields.io/github/stars/eunomia-bpf/libbpf-starter-template?style=social)
 
 Welcome to the **`libbpf-starter-template`**! This project template is designed to help you quickly start
 developing eBPF projects using libbpf in C. The template provides a solid starting point with a Makefile, 

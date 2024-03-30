@@ -7,7 +7,7 @@
 #include <sys/resource.h>
 #include <bpf/libbpf.h>
 #include "bootstrap.h"
-#include "bootstrap.skel.h"
+#include "skeleton/bootstrap.skel.h"
 
 static struct env {
 	bool verbose;

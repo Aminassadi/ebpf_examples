@@ -36,10 +36,16 @@ endef
 .PHONY: all
 all: $(APPS)
 
+.PHONY: clean_apps
+clean_apps:
+	for app in $(APPS); do \
+        $(MAKE) -C $$app clean; \
+    done
+
 .PHONY: clean
-clean:
+clean: clean_apps
 	$(call msg,CLEAN)
-	$(Q)rm -rf $(DEPS) $(BIN)
+	$(Q)rm -rf $(DEPS)
 
 $(DEPS) $(DEPS)/libbpf $(BPFTOOL_OUTPUT):
 	$(call msg,MKDIR,$@)
@@ -60,6 +66,7 @@ $(BPFTOOL): | $(BPFTOOL_OUTPUT)
 
 
 $(APPS): $(LIBBPF_OBJ) $(BPFTOOL)
-	# $(call msg,BINARY,$@)
-	# $(Q)$(CC) $(CFLAGS) $^ $(ALL_LDFLAGS) -lelf -lz -o $@
+	for app in $(APPS); do \
+        $(MAKE) -C $$app; \
+    done
 

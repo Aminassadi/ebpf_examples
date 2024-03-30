@@ -5,6 +5,7 @@
         "bootstrap.h": "c",
         "vmlinux.h": "c",
         "taskpermission.h": "c",
-        "taskpermission.skel.h": "c"
+        "taskpermission.skel.h": "c",
+        "libbpf.h": "c"
     }
 }

@@ -19,7 +19,7 @@ static int handle_event(void *ctx, void *data, size_t data_sz)
 	const struct event *e = data;
 	struct tm *tm;
 	char des = 'n';
-    printf("%-5s %-16s %-7d %-7d %s\n", "EXEC", e->comm, e->pid, e->ppid, e->filename);
+    printf("%-5s %-16s %-7d %-7d %s\n","", e->comm, e->pid, e->ppid, e->filename);
     //making decision to permit the process continue executing
     if(false)
     {
@@ -64,7 +64,7 @@ int main()
 	}
 
     rb = ring_buffer__new(bpf_map__fd(skel->maps.rb), handle_event, NULL, NULL);
-    printf("starting\n");
+    printf("%-5s %-16s %-7s %-7s %-10s\n", "EXEC", "filename", "pid", "ppid", "full path");
     while (!exiting) {
             err = ring_buffer__poll(rb, 100 /* timeout, ms */);
             /* Ctrl-C will cause -EINTR */

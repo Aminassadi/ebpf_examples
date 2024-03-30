@@ -6,6 +6,7 @@
 use **`libbpf-starter-template`**! This project template is designed to help you quickly start
 developing eBPF projects using libbpf in C. The template provides a solid starting point with a Makefile, 
 Dockerfile, and GitHub action, along with all necessary dependencies to simplify your development process.
+for more detail: *https://github.com/eunomia-bpf/libbpf-starter-template*
 
 ### **1. Install dependencies**
 

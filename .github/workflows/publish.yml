@@ -62,8 +62,10 @@ jobs:
       if:   github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: softprops/action-gh-release@v1
       with:
-          files: |
-            src/bootstrap
+        files: |
+        - src/.bin/bootstrap
+        - src/.bin/hellobpf
+        - src/.bin/taskpermission
           prerelease: false
           tag_name: ${{ steps.set_version.outputs.result }}
           generate_release_notes: true

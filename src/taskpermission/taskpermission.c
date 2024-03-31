@@ -16,9 +16,7 @@ static void sig_handler(int sig)
 
 static int handle_event(void *ctx, void *data, size_t data_sz)
 {
-	const struct event *e = data;
-	struct tm *tm;
-	char des = 'n';
+	const struct event *e = data;	
     printf("%-5s %-16s %-7d %-7d %s\n","", e->comm, e->pid, e->ppid, e->filename);
     //making decision to permit the process continue executing
     if(false)

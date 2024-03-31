@@ -13,7 +13,7 @@ ARCH ?= $(shell uname -m | sed 's/x86_64/x86/' \
 			 | sed 's/riscv64/riscv/')
 
 
-APPS = bootstrap hellobpf taskpermission
+APPS = bootstrap hellobpf taskpermission ptrace_terminator
 
 ifeq ($(V),1)
 	Q =
